@@ -7,9 +7,14 @@ import com.example.daggerhilt_guide.domain.repository.MyRepository
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
+// In service we cannot create the constructors, so inorder to inject the dependencies we
+// used the method of
+
+// FIELD Injection
 @AndroidEntryPoint
 class MyService : Service() {
 
+    // Field Injection by creating a lateinit variable and setting it later using setter function.
     @Inject
     lateinit var repository: MyRepository
 

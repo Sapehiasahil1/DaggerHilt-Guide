@@ -14,6 +14,8 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.daggerhilt_guide.ui.theme.DaggerHiltGuideTheme
 import dagger.hilt.android.AndroidEntryPoint
 
+// Where ever we initialize the dagger hilt component we add the AndroidEntryPoint there.
+// Encases of activity, services etc as these all are the components of android.
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
